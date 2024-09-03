@@ -1,0 +1,43 @@
+//A simple calculator using switch statement and scanner 
+
+package calc.com;
+import java.util.Scanner;
+public class Calculator {
+
+	public static void main(String[] args) {
+	
+		int result = 0;
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter two numbers:");
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		
+		System.out.println("Enter the operation you wanted to do (+, -, *, /,)");
+		char operator = sc.next().charAt(0);
+		
+		switch(operator) {
+		case '+':
+			result = a + b ;
+			break;
+			
+		case '-':
+			result = a - b;
+			break;
+			
+		case '*':
+			result = a * b;
+			break;
+			
+		case '/':
+			result = a / b;
+			break;
+			
+		default:
+			System.out.println("Invalid Option!");
+			break;
+		}
+		
+		System.out.println("The Answer is: " + result);		
+		}
+	}
